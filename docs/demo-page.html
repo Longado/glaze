@@ -1,0 +1,21 @@
+<!doctype html><meta charset="utf-8"><title>agent.log</title>
+<style>
+body{margin:0;background:#15161e;color:#c9d1e3;font:15px/1.65 ui-monospace,Menlo,monospace;padding:28px 34px}
+.k{color:#ff79c6}.s{color:#9ee493}.c{color:#6c7393}.f{color:#82aaff}.y{color:#ffd580}
+.bar{color:#6c7393;border-bottom:1px solid #2a2c3a;padding-bottom:10px;margin-bottom:14px}
+</style>
+<div class="bar">claude — ~/projects/billing — agent running</div>
+<pre><span class="c">// billing/export.ts</span>
+<span class="k">import</span> { stripe } <span class="k">from</span> <span class="s">"./clients"</span>
+<span class="k">const</span> API_KEY = process.env.<span class="y">STRIPE_SECRET_KEY</span>
+
+<span class="k">export async function</span> <span class="f">monthlyExport</span>(customerId: <span class="y">string</span>) {
+  <span class="k">const</span> invoices = <span class="k">await</span> stripe.invoices.<span class="f">list</span>({ customer: customerId, limit: <span class="y">100</span> })
+  <span class="k">const</span> rows = invoices.data.<span class="f">map</span>(i =&gt; [i.number, i.amount_paid / <span class="y">100</span>, i.status])
+  <span class="k">return</span> <span class="f">toCsv</span>([[<span class="s">"invoice"</span>, <span class="s">"amount"</span>, <span class="s">"status"</span>], ...rows])
+}
+
+<span class="c">● Edited billing/export.ts (+6 −2)</span>
+<span class="c">● Running tests… 14 passed</span>
+<span class="s">✓ Monthly export now includes refunded invoices.</span>
+</pre>
