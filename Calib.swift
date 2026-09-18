@@ -8,7 +8,7 @@ let LOOK_ON_DEG  = 20.0   // |yaw − base| above this → away (30 missed moder
 let LOOK_OFF_DEG = 12.0   // below this → back (hysteresis)
 let UP_ON_DEG    = 10.0   // pitch more than this above base (head up) → away
 let UP_OFF_DEG   = 5.0
-let MIN_SAMPLES  = 3      // 3 s at 2 fps gives ~6, need at least half with a face
+let MIN_SAMPLES  = 3      // 3 s at 4 fps gives ~12; floor for "the face was seen at all"
 
 struct Calib: Codable, Equatable {
     var baseYaw = 0.0, basePitch = 0.0

@@ -12,13 +12,13 @@ It's built for vibe coding: an agent keeps typing in your terminal while you're 
 
 | You... | Glaze |
 |---|---|
-| turn your head left or right past 20° | frosts after 2 s |
-| tilt your head up past 10° | frosts after 2 s |
-| leave the camera's view | frosts after 2 s |
+| turn your head left or right past 20° | frosts after 1 s |
+| tilt your head up past 10° | frosts after 1 s |
+| leave the camera's view | frosts after 1 s |
 | look down at the keyboard or your phone | stays clear |
 | face the screen again | clears on the next frame |
 
-The 2-second delay means a quick glance aside doesn't trigger it. Angles are measured from your own "facing the screen" pose, which you set once with **Calibrate**. That also makes an external monitor to the side of the laptop camera work: calibrate while facing the monitor.
+The 1-second delay means a quick glance aside doesn't trigger it. Angles are measured from your own "facing the screen" pose, which you set once with **Calibrate**. That also makes an external monitor to the side of the laptop camera work: calibrate while facing the monitor.
 
 ## Controls
 
@@ -49,7 +49,7 @@ The app is ad-hoc signed, not notarized. If macOS blocks the first launch, right
 
 ## Privacy
 
-The camera is read twice a second, face angles are computed with Apple's on-device Vision framework, and each frame is dropped right after. Nothing is saved, and the app makes no network requests. The camera turns off while the screen is locked or asleep, and while Glaze is paused.
+The camera is read four times a second, face angles are computed with Apple's on-device Vision framework, and each frame is dropped right after. Nothing is saved, and the app makes no network requests. The camera turns off while the screen is locked or asleep, and while Glaze is paused.
 
 ## Limits
 

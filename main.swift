@@ -6,8 +6,8 @@ import Vision
 import Carbon.HIToolbox
 
 // Look-away thresholds and calibration live in Calib.swift
-let FPS          = 2.0    // frames analysed per second
-let ON_DELAY_S   = 2.0    // looked away this long → blur (0.9 s flipped too eagerly in use)
+let FPS          = 4.0    // frames analysed per second (2 felt sluggish on turns)
+let ON_DELAY_S   = 1.0    // looked away this long → blur (2 s felt slow; the old 0.9 s complaint was the head-down misfire, since removed)
 let MIN_FACE_W   = 0.04   // ignore detections narrower than 4% of frame
 let DEBUG = ProcessInfo.processInfo.environment["GLAZE_DEBUG"] != nil
 
