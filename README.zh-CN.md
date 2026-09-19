@@ -19,6 +19,11 @@
   <a href="#一起做">一起做</a>
 </p>
 
+<p align="center">
+  <img src="docs/media/glaze-hero.gif" alt="Glaze 独眼角色转头后屏幕起雾，回看后恢复清晰" width="960">
+</p>
+<p align="center"><sub>功能主题插画 · <a href="docs/media/glaze-poster.png">静态版</a> · <a href="docs/media/glaze-motion.mp4">MP4</a> · <a href="docs/media/glaze-style-prompt.md">生图参考与提示词</a></sub></p>
+
 你起身离开座位，AI 还在终端里接着写代码。**Glaze 让路过的人看不清你屏幕上写的是什么。**
 
 它用 Mac 自带的摄像头判断你是不是正对着屏幕。你转过头，或者起身走开，所有屏幕都会变成磨砂玻璃：轮廓和颜色还看得见，字看不清。转回来，下一帧就恢复。

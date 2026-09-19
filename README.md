@@ -19,6 +19,11 @@
   <a href="#build-with-us">Build with us</a>
 </p>
 
+<p align="center">
+  <img src="docs/media/glaze-hero.gif" alt="Glaze one-eyed companion looks away as the screen frosts, then looks back to clear it" width="960">
+</p>
+<p align="center"><sub>Concept illustration · <a href="docs/media/glaze-poster.png">Still image</a> · <a href="docs/media/glaze-motion.mp4">MP4</a> · <a href="docs/media/glaze-style-prompt.md">Style reference and prompt</a></sub></p>
+
 Your coding agent keeps working when you step away from the desk. **Glaze keeps your screen from being read while it does.**
 
 The built-in camera checks whether you're facing the screen. Turn your head, or get up and walk off, and every display turns to frosted glass: shapes and colors show through, text doesn't. Face the screen again and it clears on the next frame.
